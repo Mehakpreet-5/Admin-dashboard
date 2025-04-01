@@ -1,0 +1,41 @@
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.dance {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: '';
+    font-style: normal;
+  }
+
+  .fontt {
+    font-family: "Dancing Script";
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .lor {
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+  .bluee{
+    background: #e7ecef;
+    
+  }
+
+  .KKK{
+    background: #F0F8FF;
+  }
+
+  .light{
+    background: #f8edeb;
+  }
