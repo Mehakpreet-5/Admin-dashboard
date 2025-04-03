@@ -8,6 +8,7 @@
 
     "build": "vite build",
     "lint": "eslint .",
+    "start":"npm run dev",
     "preview": "vite preview"
   },
   "dependencies": {
