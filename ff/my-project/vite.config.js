@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     host: 'localhost',  // Ensure it's accessible locally
-    port: 3001,         // Change to desired port
+    port: 3000,         // Change to desired port
     strictPort: true,   // Ensures Vite fails if the port is unavailable
   },
 })
