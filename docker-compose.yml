@@ -2,21 +2,19 @@ version: "3.8"
 
 services:
   server:
-    build: ./server
+    image: mehakpreet23/5-april-admin-server:latest  # Use the image from Docker Hub
     ports:
       - "5000:5000"
     environment:
       - NODE_ENV=production
-    volumes:
-      - ./server:/app
-    # Uncomment if you need to set specific environment variables for the server
+    # volumes:  # You can remove the volumes unless you want to mount a local directory for development
+      # - ./server:/app
 
   client:
-    build: ./ff/my-project # Ensure this points to the correct frontend directory
+    image: mehakpreet23/5-april-admin-client:latest  # Use the image from Docker Hub
     ports:
       - "3000:3000"
     environment:
       - NODE_ENV=production
-    volumes:
-      - ./ff/my-project:/app
-    # Uncomment if you need to set specific environment variables for the client
+    # volumes:  # You can remove the volumes unless you want to mount a local directory for development
+      # - ./ff/my-project:/app
