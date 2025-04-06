@@ -1,6 +1,6 @@
 services:
   server:
-    build: /server
+    build: ./server
     ports:
       - "5000:5000"
     # Optionally add environment variables or volume mounts as needed
@@ -8,7 +8,7 @@ services:
     #   - NODE_ENV=production
 
   client:
-    build: /ff/my-project # Ensure this points to the correct frontend directory
+    build: ./ff/my-project # Ensure this points to the correct frontend directory
     ports:
       - "3000:3000"
     # Optionally add environment variables or volume mounts for client
