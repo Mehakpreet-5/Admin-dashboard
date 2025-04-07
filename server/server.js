@@ -78,10 +78,10 @@ app.use("/", Todoo);
 app.use("/api/salesChart", salesChart);
 // app.use("/api/employees", employeeRoutes);
 
-app.use(cors({
-  origin: ["http://localhost:3000", "http://13.203.36.105:3000"], // add more if needed
-  credentials: true,
-}));
+// app.use(cors({
+//   origin: ["http://localhost:3000", "http://13.203.36.105:3000"], // add more if needed
+//   credentials: true,
+// }));
 
 
 // app.use('/api/employ', require('./routes/employeeRoutes'));
