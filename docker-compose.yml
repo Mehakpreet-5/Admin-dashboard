@@ -1,15 +1,13 @@
+# docker-compose.yml
 version: '3'
 services:
+  server:
+    build: ./server
+    ports:
+      - "5000:5000"
+
   client:
-    image: admin-client-local:latest
-    build:
-      context: ./ff/my-project
+    build: ./ff/my-project
     ports:
       - "3000:3000"
 
-  server:
-    image: admin-server-local:latest
-    build:
-      context: ./server
-    ports:
-      - "5000:5000"
