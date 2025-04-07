@@ -3,7 +3,7 @@ import axios from "axios";
 import { Users, UserCheck, UserPlus } from "lucide-react";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, BarChart, Bar, Cell } from "recharts";
 
-const API_URL = "http://localhost:5000/api/users/"; // Replace with actual API
+const API_URL = "http://13.203.36.105:5000/api/users/"; // Replace with actual API
 
 const Card = ({ children }) => (
   <div className="bg-gray-800 text-white shadow-lg rounded-lg p-5">{children}</div>

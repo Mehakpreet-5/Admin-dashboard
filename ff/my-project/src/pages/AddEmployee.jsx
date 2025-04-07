@@ -11,7 +11,7 @@ const AddEmployee = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/attend', formData);
+      await axios.post('http://13.203.36.105:5000/api/attend', formData);
       alert('Employee added successfully');
     } catch (error) {
       console.error(error);
@@ -28,7 +28,7 @@ const AddEmployee = () => {
         <button type="submit">Add Employee</button>
       </form>
     </div>
-  );
+  ); 
 };
 
 export default AddEmployee;

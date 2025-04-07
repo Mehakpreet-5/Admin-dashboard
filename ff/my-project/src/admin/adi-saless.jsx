@@ -22,7 +22,7 @@ function Saless() {
   // Fetch sales data from backend
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/saless") // Ensure the correct backend URL
+      .get("http://13.203.36.105:5000/api/saless") // Ensure the correct backend URL
       .then((response) => {
         console.log("Fetched Sales Data:", response.data);
         setSalesData(response.data);

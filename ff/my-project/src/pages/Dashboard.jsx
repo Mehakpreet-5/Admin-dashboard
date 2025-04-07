@@ -8,7 +8,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/dashboard");
+        const response = await axios.get("http://13.203.36.105:5000/dashboard");
         setData(response.data);
         setLoading(false);
       } catch (error) {

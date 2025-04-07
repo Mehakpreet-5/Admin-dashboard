@@ -16,7 +16,7 @@ export default function Dashboard() {
     const fetchEmployees = async () => {
         setLoading(true);
         try {
-            const res = await fetch("http://localhost:5000/emp");
+            const res = await fetch("http://13.203.36.105:5000/emp");
             const data = await res.json();
             setEmployees(data);
         } catch (error) {
@@ -34,14 +34,14 @@ export default function Dashboard() {
 
         try {
             if (editId) {
-                await fetch(`http://localhost:5000/emp/${editId}`, {
+                await fetch(`http://13.203.36.105:5000/emp/${editId}`, {
                     method: "PUT",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify(form),
                 });
                 setEditId(null);
             } else {
-                await fetch("http://localhost:5000/emp", {
+                await fetch("http://13.203.36.105:5000/emp", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify(form),
@@ -57,7 +57,7 @@ export default function Dashboard() {
     const handleDelete = async (id) => {
         if (!window.confirm("Are you sure you want to delete this employee?")) return;
         try {
-            await fetch(`http://localhost:5000/emp/${id}`, { method: "DELETE" });
+            await fetch(`http://13.203.36.105:5000/emp/${id}`, { method: "DELETE" });
             fetchEmployees();
         } catch (error) {
             alert("Error deleting employee");

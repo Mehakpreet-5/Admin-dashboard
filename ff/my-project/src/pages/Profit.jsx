@@ -9,7 +9,7 @@ const ProfitDashboard = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/profit")
+      .get("http://13.203.36.105:5000/api/profit")
       .then((response) => {
         console.log("API Response:", response.data);
         setProfits(response.data.transactions || []);

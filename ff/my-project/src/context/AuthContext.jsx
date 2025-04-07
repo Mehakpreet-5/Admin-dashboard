@@ -9,7 +9,7 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (email, password) => {
     try {
-      const response = await axios.post("http://localhost:5000/auth/login", { email, password });
+      const response = await axios.post("http://13.203.36.105:5000/auth/login", { email, password });
       setUser(response.data.user);
       localStorage.setItem("token", response.data.token);
     } catch (error) {

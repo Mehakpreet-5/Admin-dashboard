@@ -12,7 +12,7 @@ function TodoDashboard() {
     // Fetch todos based on filter
     useEffect(() => {
         const fetchTodos = async () => {
-            const response = await axios.get(`http://localhost:5000/todos?filter=${filter}`);
+            const response = await axios.get(`http://13.203.36.105:5000/todos?filter=${filter}`);
             setTodos(response.data);
         };
 
@@ -22,14 +22,14 @@ function TodoDashboard() {
     // Add new todo
     const handleAddTodo = async () => {
         if (!newTodoText.trim()) return;
-        const response = await axios.post('http://localhost:5000/todos', { text: newTodoText });
+        const response = await axios.post('http://13.203.36.105:5000/todos', { text: newTodoText });
         setTodos([...todos, response.data]);
         setNewTodoText('');
     };
 
     // Toggle todo completion
     const toggleCompletion = async (id, completed) => {
-        const response = await axios.put(`http://localhost:5000/todos/${id}`, {
+        const response = await axios.put(`http://13.203.36.105:5000/todos/${id}`, {
             completed: !completed,
         });
         setTodos(todos.map((todo) => (todo._id === id ? response.data : todo)));
@@ -37,7 +37,7 @@ function TodoDashboard() {
 
     // Edit todo text
     const handleEditTodo = async (id, newText) => {
-        const response = await axios.put(`http://localhost:5000/todos/${id}`, {
+        const response = await axios.put(`http://13.203.36.105:5000/todos/${id}`, {
             text: newText,
         });
         setTodos(todos.map((todo) => (todo._id === id ? response.data : todo)));
@@ -45,7 +45,7 @@ function TodoDashboard() {
 
     // Delete todo
     const handleDeleteTodo = async (id) => {
-        await axios.delete(`http://localhost:5000/todos/${id}`);
+        await axios.delete(`http://13.203.36.105:5000/todos/${id}`);
         setTodos(todos.filter((todo) => todo._id !== id));
     };
 

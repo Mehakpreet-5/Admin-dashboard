@@ -100,7 +100,7 @@ export
         const [loading, setLoading] = useState(true);
     
         useEffect(() => {
-            fetch("http://localhost:5000/api/salesChart")
+            fetch("http://13.203.36.105:5000/api/salesChart")
                 .then((response) => response.json())
                 .then((data) => {
                     console.log("Sales API Response:", data); // Debugging

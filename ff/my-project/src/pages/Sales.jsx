@@ -21,7 +21,7 @@ const Dashboard = () => {
     { product: "Reebok Classic", sales: 50, revenue: 2500 },
   ];
   useEffect(() => {
-    axios.get("http://localhost:5000/api/sales")
+    axios.get("http://13.203.36.105:5000/api/sales")
       .then(response => {
         setSalesData(response.data.sales);
         setTotalRevenue(response.data.totalRevenue);
