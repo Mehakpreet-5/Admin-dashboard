@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+    base: './', // ✅ Add this line
   plugins: [react()],
   server: {
     host: 'localhost',  // Ensure it's accessible locally
