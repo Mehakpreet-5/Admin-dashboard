@@ -1,38 +1,38 @@
-# version: "3.8"
-
-# services:
-#   server:
-#     image: mehakpreet23/5-april-admin-server:latest
-#     ports:
-#       - "5000:5000"
-#     environment:
-#       - NODE_ENV=production
-
-#   client:
-#     image: mehakpreet23/5-april-admin-client:latest
-#     ports:
-#       - "3000:3000"
-#     environment:
-#       - NODE_ENV=production
-
-
 version: "3.8"
 
 services:
   server:
-    build:
-      context: ./server
-      dockerfile: Dockerfile
+    image: mehakpreet23/5-april-admin-server:latest
     ports:
       - "5000:5000"
     environment:
       - NODE_ENV=production
 
   client:
-    build:
-      context: ./ff/my-project
-      dockerfile: Dockerfile
+    image: mehakpreet23/5-april-admin-client:latest
     ports:
       - "3000:3000"
     environment:
       - NODE_ENV=production
+
+
+# version: "3.8"
+
+# services:
+#   server:
+#     build:
+#       context: ./server
+#       dockerfile: Dockerfile
+#     ports:
+#       - "5000:5000"
+#     environment:
+#       - NODE_ENV=production
+
+#   client:
+#     build:
+#       context: ./ff/my-project
+#       dockerfile: Dockerfile
+#     ports:
+#       - "3000:3000"
+#     environment:
+#       - NODE_ENV=production
